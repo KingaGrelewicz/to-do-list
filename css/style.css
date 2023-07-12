@@ -1,0 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.container {
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}

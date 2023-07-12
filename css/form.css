@@ -1,0 +1,54 @@
+.form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+}
+
+.form__name {
+    border: none;
+}
+
+.form__field {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    background-color: #fefefe;
+    list-style: none;
+
+}
+
+.form__field--tasks {
+    border: none;
+    background-color: #fefefe;
+    max-width: 500px;
+    margin: 5px auto;
+}
+
+.form__newTask {
+    width: 100%;
+    max-width: 250px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.form__button {
+    background-color: hsl(180, 100%, 25%);
+    color: #fefefe;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 96%, 35%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 96%, 40%);
+}
