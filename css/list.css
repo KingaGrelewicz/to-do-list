@@ -1,0 +1,4 @@
+.list__item--done {
+    text-decoration: line-through;
+    list-style: none;
+};
