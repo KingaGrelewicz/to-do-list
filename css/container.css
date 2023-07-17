@@ -2,4 +2,6 @@
     background-color: #eee;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    display: grid;
+    justify-content: center;
 }
