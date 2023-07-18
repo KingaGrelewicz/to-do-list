@@ -4,4 +4,6 @@
     font-weight: bold;
     display: grid;
     justify-content: center;
+    max-width: 800px;
+    width: 100%;
 }

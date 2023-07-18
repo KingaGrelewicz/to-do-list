@@ -2,40 +2,6 @@
     border: 1px solid #eee;
     border-collapse: collapse;
     padding: 15px;
-    width: 100%;
-    max-width: 800px;
-}
-
-.form__name {
-    border: none;
-    margin: 50px 0 10px;
-    font-size: 35px;
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: span 2;
-}
-
-.form__field {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 5px;
-    border: 1px solid #eee;
-    border-collapse: collapse;
-    background-color: #fefefe;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-start: 2;
-    grid-column-end: 7;
-
-}
-
-.form__field--tasks {
-    border: none;
-    background-color: #fefefe;
-    max-width: 800px;
-    margin: 5px auto;
 }
 
 .form__newTask {
