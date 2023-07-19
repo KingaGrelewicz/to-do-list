@@ -8,7 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/form.css" rel="stylesheet">
   <link href="css/container.css" rel="stylesheet">
-  <link href="css/form.css" rel="stylesheet">
+  <link href="css/list.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,17 +17,17 @@
   <script defer src="JS/script.js"></script>
 </head>
 
-<body class="container">
-  <section>
-    <h1>Lista zadań</h1>
-    <h2>Dodaj nowe zadanie</h2>
+<body class="body">
+  <section class="container">
+    <h1 class="header">Lista zadań</h1>
+    <h2 class="subheader">Dodaj nowe zadanie</h2>
     <form class="form js-form">
       <input class="form__newTask js-newTask" name="newTask" placeholder="Co jest do zrobienia?">
       <button class="form__button">Dodaj zadanie</button>
     </form>
-    <h2>Lista zadań</h2>
+    <h2 class="subheader--last">Lista zadań</h2>
+    <ul class="list js-tasks"></ul>
   </section>
-  <ul class="js-tasks"></ul>
 </body>
 
 </html>
