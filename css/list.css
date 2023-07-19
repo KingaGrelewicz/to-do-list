@@ -17,22 +17,18 @@
 
 .list__item--done {
     text-decoration: line-through;
-    list-style-type: none;
-
 }
 
-.doneButton {
+.list__doneButton {
     border: none;
-    background-color: none;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 5;
 }
 
-.removeButton {
+.list__removeButton {
     border: none;
-    display: grid;
     display: grid;
     grid-column-start: 5;
     grid-column-end: 6;
