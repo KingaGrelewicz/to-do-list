@@ -1,36 +1,66 @@
 .list {
-    background-color: white;
-    margin: 5px 0 10px;
-    border: 1px solid #eee;
-    border-collapse: collapse;
-    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px repeat(1fr);
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 5;
     grid-row-end: auto;
 }
 
+.list__header {
+    background-color: white;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    font-size: 20px;
+    padding: 20px 15px;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    align-items: center;
+    margin: 20px 0 5px;
+}
+
+.list__tasks{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 15px;
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
 .list__item {
     list-style-type: none;
+    padding: 10px;
+
 }
 
 .list__item--done {
     text-decoration: line-through;
+    list-style-type: none;
 }
 
 .list__doneButton {
     border: none;
+    background-color: none;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start: 5;
 }
 
 .list__removeButton {
-    border: none;
     display: grid;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 5;
+    grid-column-start: -1;
+
 }
