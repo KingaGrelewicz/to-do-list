@@ -47,11 +47,11 @@
                 <li
                     class="list__item${task.done ? " list__item--done" : ""}"
                 >
-                <button class="list__doneButton js-done">
+                <button class="list__button js-done">
                     <img width="20" src="Images/check-mark-button.png">
                 </button>
                 ${task.content}
-                <button class="list__removeButton js-remove">
+                <button class="list__button list__button--remove js-remove">
                     <img width="20" src="Images/remove-button.png">
                 </button>
                 </li>

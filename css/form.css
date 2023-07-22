@@ -1,12 +1,13 @@
 .form {
     background-color: white;
-    margin: 5px 0 10px;
+    margin: 1px 0 5px;
     border: 1px solid #eee;
     border-collapse: collapse;
     padding: 15px;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 6;
+    align-content: center;
 }
 
 .form__newTask {

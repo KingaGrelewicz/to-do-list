@@ -6,7 +6,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 50px repeat(1fr);
+    grid-template-rows: repeat(2 50px);
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 5;
@@ -18,12 +18,13 @@
     border: 1px solid #eee;
     border-collapse: collapse;
     font-size: 20px;
+    margin: 5px 0 1px;
     padding: 20px 15px;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 6;
     align-items: center;
-    margin: 20px 0 5px;
+
 }
 
 .list__tasks{
@@ -43,15 +44,17 @@
 .list__item {
     list-style-type: none;
     padding: 10px;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #eee;
 
 }
 
 .list__item--done {
     text-decoration: line-through;
-    list-style-type: none;
 }
 
-.list__doneButton {
+.list__button {
     border: none;
     background-color: none;
     display: grid;
@@ -59,7 +62,7 @@
     grid-column-end: 6;
 }
 
-.list__removeButton {
+.list__button--remove {
     display: grid;
     grid-column-start: -1;
 

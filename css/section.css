@@ -6,7 +6,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 100px 80px 90px;
     grid-gap: 0;
 }
 
@@ -15,7 +15,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     align-items: end;
-    margin: 20px 0 5px;
+    margin: 20px 0 1px;
 }
 
 .section__subheader {
@@ -23,6 +23,7 @@
     border: 1px solid #eee;
     border-collapse: collapse;
     font-size: 20px;
+    margin: 15px 0 1px;
     padding: 20px 15px;
     display: grid;
     grid-column-start: 1;
