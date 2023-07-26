@@ -39,6 +39,12 @@
         });
     };
 
+    const focusInput = document.querySelector(".js-button");
+        focusInput.addEventListener("click", () => {
+            form__newTask = document.querySelector(".form__newTask")
+            form__newTask.focus();
+        });
+
     const render = () => {
         let htmlString = "";
 
