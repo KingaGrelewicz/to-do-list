@@ -6,33 +6,51 @@
     padding: 15px;
     display: grid;
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 7;
     align-content: center;
+}
+
+@media (max-width: 768px) {
+    .form {
+        margin: 0 0 1px;
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
 }
 
 .form__newTask {
     padding: 10px;
+    border: 1px solid #ddd;
     display: grid;
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 3;
     width: 100%;
     align-self: center;
 }
 .form__button {
-    margin: 10px;
+    margin: 10px 0 10px 10px;
     background-color: hsl(180, 100%, 25%);
     color: #fefefe;
     border: none;
     padding: 10px;
     cursor: pointer;
     display: grid;
-    grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-start: 7;
+    grid-column-end: 7;
     grid-row-start: 2;
 }
 
+@media (max-width: 768px) {
+    .form__button {
+        display: flex;
+        flex-grow: 1;
+        margin: 10px 0;
+        justify-content: center;
+    }
+}
 .form__button:hover {
     background-color: hsl(180, 96%, 35%);
 }

@@ -6,7 +6,9 @@
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
+            
         });
+        
 
         render();
     };
@@ -62,6 +64,7 @@
                 </button>
                 </li>
             `;
+
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -77,7 +80,7 @@
 
         if (newTaskContent === "") {
             return;
-        };
+        }
 
         addNewTask(newTaskContent);
 
