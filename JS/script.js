@@ -59,7 +59,7 @@
                     <img width="20" src="Images/check-mark-button.png">
                 </button>
                 ${task.content}
-                <button class="list__button list__button--remove js-remove">
+                <button class="list__button js-remove">
                     <img width="20" src="Images/remove-button.png">
                 </button>
                 </li>
@@ -83,10 +83,9 @@
         }
 
         addNewTask(newTaskContent);
-
     };
 
-    const init = () => {
+      const init = () => {
         render();
 
         const form = document.querySelector(".js-form");

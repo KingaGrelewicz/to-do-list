@@ -4,17 +4,15 @@
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(50px, auto);
+    list-style: none;
 }
 
 @media (max-width: 768px) {
     .list {
-    margin: 10px 0;
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: wrap;
+        margin: 10px 0;
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
     }
 }
 
@@ -24,9 +22,6 @@
     border-collapse: collapse;
     font-size: 20px;
     padding: 20px 15px;
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 7;
     margin: 5px 0px 1px;
 }
 
@@ -38,7 +33,7 @@
     }
 }
 
-.list__tasks{
+.list__tasks {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
@@ -48,7 +43,7 @@
     padding: 15px;
     display: grid;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 4;
 }
 
 .list__item {
@@ -58,8 +53,10 @@
     border-width: 0 0 2px 0;
     border-style: solid;
     border-color: #eee;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 12px;
+
 }
 
 .list__item--done {
@@ -68,8 +65,5 @@
 
 .list__button {
     border: none;
-    background-color: white; 
-}
-
-.list__button--remove {
+    background-color: white;
 }
