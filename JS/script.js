@@ -56,11 +56,11 @@
                     class="list__item${task.done ? " list__item--done" : ""}"
                 >
                 <button class="list__button js-done">
-                    <img width="20" src="Images/check-mark-button.png">
+                    <img width="25" src="Images/check-mark-button.png">
                 </button>
                 ${task.content}
                 <button class="list__button js-remove">
-                    <img width="20" src="Images/remove-button.png">
+                    <img width="25" src="Images/remove-button.png">
                 </button>
                 </li>
             `;
@@ -75,12 +75,16 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        const newTask = document.querySelector(".js-newTask");
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = newTask.value.trim();
 
         if (newTaskContent === "") {
             return;
         }
+
+        newTask.value = "";
+        newTask.focus();
 
         addNewTask(newTaskContent);
     };

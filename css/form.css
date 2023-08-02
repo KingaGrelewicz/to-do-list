@@ -1,11 +1,10 @@
 .form {
     background-color: white;
-    margin: 1px 0 5px;
-    border: 1px solid #eee;
+    margin: 0 0 5px;
     border-collapse: collapse;
     padding: 15px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns:  1fr auto;
     grid-column-start: 1;
     grid-column-end: 4;
     align-content: center;
