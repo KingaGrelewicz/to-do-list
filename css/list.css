@@ -1,25 +1,44 @@
 .list__item {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    list-style: none;
-    background-color: white;
-    list-style-type: none;
     padding: 10px;
-    border-width: 0 0 2px 0;
-    border-style: solid;
-    border-color: #eee;
+    border-bottom: 1px solid #ddd;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 12px;
     align-items: center
 }
 
-.list__item--done {
+.list__content--done {
     text-decoration: line-through;
 }
 
 .list__button {
     border: none;
-    background-color: white;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+}
+
+.list__button--toggleDone {
+    background-color: rgb(18, 103, 3);
+}
+
+.list__button--toggleDone:hover {
+    background-color: hsl(111, 94%, 27%);
+}
+
+.list__button--toggleDone:active {
+    background-color: hsl(111, 94%, 35%);   
+}
+
+.list__button--remove {
+    background-color: rgb(220, 52, 52);
+}
+
+.list__button--remove:hover {
+    background-color: hsl(0, 71%, 60%);
+}
+
+.list__button--remove:active {
+    background-color: hsl(0, 71%, 67%);
 }
