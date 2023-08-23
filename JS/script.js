@@ -19,11 +19,12 @@
         render();
     };
 
-
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+    const toggleTaskDone = tasks.map((tasks, taskIndex) => {
+        tasks = [
+            { ...task.done = !task.done }
+        ];
         render();
-    };
+    });
 
     const bindEvents = () => {
         const removeButton = document.querySelectorAll(".js-remove");
@@ -42,10 +43,6 @@
             });
         });
     };
-
-    const BindButtonsEvents = () => {
-        const toggleAllTaskDone = document.querySelectorAll(".js-toggleAllTaskDone");
-    }
 
     const renderTasks = () => {
         let htmlString = "";
@@ -69,27 +66,16 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     }
 
-    const renderButtons = () => { 
-        let htmlAdditionalButtons = "";
+    const renderButtons = () => { }
 
-        for (const task of tasks) {
-            htmlAdditionalButtons += `
-            <button class="toggleAllTaskDoneButton toggleAllTaskDoneButtonDisabled js-toggleAllTaskDone">
-                ${task.done ? "toggleAllTaskDoneButtonDisabled" : "toggleAllTaskDoneButton"}
-            </button>
-            `;
-        }
-
-        document.querySelector(".js-toggleAllTaskDone").innerHTML = htmlAdditionalButtons;
-    }
-
+    const bindButtonsEvents = () => { };
 
     const render = () => {
         renderTasks();
-        renderButtons();
+
 
         bindEvents();
-        BindButtonsEvents();
+
     };
 
     const onFormSubmit = (event) => {
