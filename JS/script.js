@@ -19,12 +19,12 @@
         render();
     };
 
-    const toggleTaskDone = tasks.map((tasks, taskIndex) => {
-        tasks = [
-            { ...task.done = !task.done }
-        ];
+    const toggleTaskDone = (taskIndex) => {
+        tasks = tasks.map((task, index) =>
+          index === taskIndex ? { ...task, done: !task.done } : task
+        );
         render();
-    });
+      };
 
     const bindEvents = () => {
         const removeButton = document.querySelectorAll(".js-remove");
@@ -61,18 +61,32 @@
                  </button>
                 </li>
             `;
-        }
+        };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-    }
+    };
 
-    const renderButtons = () => { }
+    const renderButtons = () => {
+        let htmlAdditionalButtons = "";
+
+        for (const task of tasks) {
+            htmlAdditionalButtons += `
+                <div class="js-button">
+                  <button class="toggleAllTaskDoneButton js-toggleAllTaskDoneButton">
+                    Ukończ wszystkie
+                  </button>
+                </div>
+            `;
+        };
+
+        document.querySelector(".js-button").innerHTML = htmlAdditionalButtons;
+     };
 
     const bindButtonsEvents = () => { };
 
     const render = () => {
         renderTasks();
-
+        renderButtons();
 
         bindEvents();
 
