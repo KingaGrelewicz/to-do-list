@@ -17,8 +17,7 @@
 
 .section__list {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-column-end: 3;
+    grid-template-columns: 1fr auto auto;
     border-bottom: 2px solid #eee;
 }
 

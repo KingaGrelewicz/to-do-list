@@ -1,4 +1,4 @@
-.buttons {
+.section__button {
     border: none;
     border-bottom: 1px solid #eee;
     border-collapse: collapse;
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 768px) {
-    .toggleAllTaskDoneButton {
+    .button {
         display: flex;
         flex-grow: 1;
         justify-content: center;
