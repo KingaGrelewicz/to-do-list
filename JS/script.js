@@ -26,20 +26,21 @@
         render();
     };
 
-    const markAllTasksDone = () => {
-        tasks = tasks.map(task => ({ ...task, done: true }));
+    const markAllDone = () => {
+        tasks = tasks.map(task => ({ ...task, done: !task.done }));
         render();
     };
 
-    const bindEvents = () => {
-        const removeButton = document.querySelectorAll(".js-remove");
+    const bindRemoveEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-remove");
 
-        removeButton.forEach((removeButton, taskIndex) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
                 removeTask(taskIndex);
             });
         });
-
+    };
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
         toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
@@ -77,16 +78,19 @@
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
     };
 
     const renderButton = () => {
-        const buttons = document.querySelector(".js-buttons");
+        const buttonsContainer = document.querySelector(".js-buttons");
+        const hasTasks = tasks.length > 0;
+    
         const htmlAdditionalButtons = `
-          <div class="js-buttons">
-            <button class="section__button">Ukryj wszystkie</button>
-            <button class="section__button js-toggleAllDone">Ukończ wszystkie</button>
-          </div>
+            <button class="section__button js-toggleAllDone">${hasTasks ? "Ukończ wszystkie" : ""}</button>
+            <button class="section__button">${hasTasks ? "Ukryj wszystkie" : ""}</button>
         `;
+    
+        buttonsContainer.innerHTML = htmlAdditionalButtons;
     };
     
 
@@ -94,7 +98,8 @@
         renderTasks();
         renderButton();
 
-        bindEvents();
+        bindRemoveEvents();
+        bindToggleDoneEvents();
         bindButtonsEvents();
     };
 
