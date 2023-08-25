@@ -1,32 +1,30 @@
 .section__button {
-    border: none;
-    border-bottom: 1px solid #eee;
-    border-collapse: collapse;
     background-color: white;
+    border: none;
     color: teal;
     padding: 20px 15px;
     cursor: pointer;
     transition: 1s;
 }
 
-.toggleAllTaskDoneButton:hover {
+.section__button:hover {
     color: hsl(180, 96%, 35%);
 }
 
-.toggleAllTaskDoneButton:active {
+.section__button:active {
     color: hsl(180, 96%, 40%);
 }
 
-.toggleAllTaskDoneButtonDisabled {
-    display: none;
-}
-
 @media (max-width: 768px) {
-    .button {
-        display: flex;
-        flex-grow: 1;
+    .section__button {
+        display: grid;
+        grid-template-columns: 1fr;
         justify-content: center;
         border: none;
         padding: 20px;
     }
+}
+
+.section__button--hidden {
+    display: none;
 }

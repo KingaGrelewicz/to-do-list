@@ -17,11 +17,10 @@
 
 .section__list {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
-    justify-content: space-between;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
     border-bottom: 1px solid #ddd;
+    background-color: white;
 }
 
 @media (max-width: 768px) {
@@ -52,12 +51,8 @@
 }
 
 .section__header--list {
-    background-color: white;
-    border-bottom: 1px solid #eee;
-    border-collapse: collapse;
     font-size: 20px;
     padding: 20px 15px;
-    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -68,7 +63,6 @@
     }
 }
 
-
 .section__tasks {
     max-width: 900px;
     width: 100%;
@@ -76,6 +70,3 @@
     background-color: white;
     padding: 15px;
 }
-
-
-
