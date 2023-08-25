@@ -26,6 +26,11 @@
         render();
     };
 
+    const markAllTasksDone = () => {
+        tasks = tasks.map(task => ({ ...task, done: true }));
+        render();
+    };
+
     const bindEvents = () => {
         const removeButton = document.querySelectorAll(".js-remove");
 
@@ -45,12 +50,11 @@
     };
 
     const bindButtonsEvents = () => {
-
-        const toggleAllTaskDone = document.querySelector(".js-toggleAllDone");
-
-        toggleAllTaskDone.addEventListener("click", () => {
-            
-        })
+        const toggleAllDoneButton = document.querySelector(".js-toggleAllDone");
+    
+        if (toggleAllDoneButton !== null) {
+            toggleAllDoneButton.addEventListener("click", markAllDone);
+        }
     };
 
     const renderTasks = () => {
@@ -76,17 +80,15 @@
     };
 
     const renderButton = () => {
-        let htmlAdditionalButtons = "";
-
-        htmlAdditionalButtons += `
+        const buttons = document.querySelector(".js-buttons");
+        const htmlAdditionalButtons = `
           <div class="js-buttons">
             <button class="section__button">Ukryj wszystkie</button>
             <button class="section__button js-toggleAllDone">Ukończ wszystkie</button>
           </div>
         `;
-
-        document.querySelector(".js-buttons").innerHTML = htmlAdditionalButtons;
     };
+    
 
     const render = () => {
         renderTasks();

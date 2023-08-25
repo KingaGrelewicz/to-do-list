@@ -5,8 +5,6 @@
     background-color: white;
     color: teal;
     padding: 20px 15px;
-    display: flex;
-    justify-content: flex-end;
     cursor: pointer;
     transition: 1s;
 }
