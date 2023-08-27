@@ -25,6 +25,7 @@
     }
 }
 
-.section__button--hidden {
-    display: none;
+.section__button:disabled {
+    color: gray;
+    cursor: not-allowed;
 }

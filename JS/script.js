@@ -27,14 +27,13 @@
     };
 
     const markAllDone = () => {
-        tasks = tasks.map(task => ({ ...task, done: !task.done }));
-        render();
-    };
+        const anyTasksNotDone = tasks.some(task => !task.done);
 
-    const toggleHideDoneTasks = (taskIndex) => {
-        hideDoneTasks = hideDoneTasks.map((hideDoneTasks, index) =>
-            index === taskIndex ? { ...hideDoneTasks, done: !hideDoneTasks.true } : hideDoneTasks
-        );
+        tasks = tasks.map(task => ({
+            ...task,
+            done: anyTasksNotDone ? true : task.done,
+        }));
+
         render();
     };
 
@@ -60,18 +59,16 @@
 
     const bindButtonsEvents = () => {
         const toggleAllDoneButton = document.querySelector(".js-toggleAllDone");
-    
+
         if (toggleAllDoneButton !== null) {
             toggleAllDoneButton.addEventListener("click", markAllDone);
-        }
+        };
 
         const hideDoneTasksButton = document.querySelector(".js-taskItemHidden");
-    
-        if (hideDoneTasks === false) {
-            hideDoneTasksButton.addEventListener("click", () => {
-                hideTaskDone = true;
-            });
-        }
+        hideDoneTasksButton.addEventListener("click", () => {
+            hideDoneTasks = !hideDoneTasks;
+            render();
+        });
     };
 
     const renderTasks = () => {
@@ -80,15 +77,15 @@
         for (const task of tasks) {
             htmlString += `
                 <li
-                    class="list__item js-task"
+                    class="list__item js-task${task.done && hideDoneTasks ? " list__item-hidden" : ""}""
                 >
                  <button class="list__button list__button--toggleDone js-toggleDone"> 
                     ${task.done ? "✔" : ""}
                  </button>
-                  <span class="list__content${task.done ? " list__content--done section__button--hidden" : ""}">
+                  <span class="list__content${task.done ? " list__content--done" : ""}">
                     ${task.content}
                   </span>
-                 <button class="list__button list__button--remove  js-remove">
+                 <button class="list__button list__button--remove js-remove">
                   🗑
                  </button>
                 </li>
@@ -102,19 +99,20 @@
     const renderButton = () => {
         const buttonsContainer = document.querySelector(".js-buttons");
         const haveTasks = tasks.length > 0;
-    
+        const allTasksDone = tasks.every(task => task.done);
+
         const htmlAdditionalButtons = `
-            <button class="section__button section__button--disabled js-toggleAllDone">
+            <button class="section__button js-toggleAllDone"${allTasksDone ? " disabled" : ""}>
                ${haveTasks ? "Ukończ wszystkie" : ""}
             </button>
             <button class="section__button js-taskItemHidden">
-               ${haveTasks ? "Ukryj wszystkie" : ""}
+               ${haveTasks ? (hideDoneTasks ? "Pokaż wszystkie" : "Ukryj wszystkie") : ""}
             </button>
         `;
-        
+
         buttonsContainer.innerHTML = htmlAdditionalButtons;
     };
-    
+
 
     const render = () => {
         renderTasks();
