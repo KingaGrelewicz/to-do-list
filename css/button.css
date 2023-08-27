@@ -4,7 +4,7 @@
     color: teal;
     padding: 20px 15px;
     cursor: pointer;
-    transition: 1s;
+    transition: 2s;
 }
 
 .section__button:hover {
@@ -21,7 +21,8 @@
         grid-template-columns: 1fr;
         justify-content: center;
         border: none;
-        padding: 20px;
+        padding: 10px;
+        margin: 0 auto;
     }
 }
 
