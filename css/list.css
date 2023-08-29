@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 12px;
-    align-items: center
+    align-items: center;
 }
 
 .list__item-hidden {
@@ -21,6 +21,8 @@
     width: 30px;
     height: 30px;
     padding: 0px;
+    cursor: pointer;
+    transition: 1s;
 }
 
 .list__button--toggleDone {
